@@ -13,15 +13,11 @@ You can set up this environment using conda and build PyPolyChord from source.
 
 ```bash
 # Create environment
-conda create -n polychord_env python=3.10 -y
+conda create --name polychord_env python=3.10 --platform osx-arm64
 conda activate polychord_env
 
 # Install basic tools and compilers
-conda install -c conda-forge numpy cython make cmake git -y
-conda install -c conda-forge fortran-compiler compilers -y
-
-# (Optional) For MPI parallelism
-conda install -c conda-forge openmpi mpi4py -y
+conda install -c conda-forge compilers openmpi mpi4py cmake make
 
 # Clone and build PolyChordLite
 git clone https://github.com/PolyChord/PolyChordLite.git
